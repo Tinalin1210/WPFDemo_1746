@@ -1,0 +1,9 @@
+﻿<Window x:Class="WPFDemo_1746.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Stock Data" Height="450" Width="800">
+    <Grid>
+        <!-- 確保這裡是 DataGrid，並且設置 x:Name -->
+        <DataGrid x:Name="StockDataGrid" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+    </Grid>
+</Window>

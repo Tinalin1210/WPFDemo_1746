@@ -1,9 +1,11 @@
-﻿<Window x:Class="WPFDemo_1746.MainWindow"
+﻿<!--這段 XAML 代碼定義了一個基本的 WPF 窗口-->
+<Window x:Class="WPFDemo_1746.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Stock Data" Height="450" Width="800">
     <Grid>
         <!-- 確保這裡是 DataGrid，並且設置 x:Name -->
+        <!--HorizontalAlignment="Stretch" 和 VerticalAlignment="Stretch"：這兩個屬性設置要為了水平和垂直對齊-->
         <DataGrid x:Name="StockDataGrid" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
     </Grid>
 </Window>

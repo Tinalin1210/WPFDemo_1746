@@ -23,14 +23,17 @@ namespace WPFDemo_1746
             try
             {
                 // 取得資料庫連線字串
-                string connectionString = ConfigurationManager.ConnectionStrings["OracleDbContext"].ConnectionString;//使用 ConfigurationManager 來讀取 App.config
+                //使用 ConfigurationManager 來讀取 App.config
+                //ConfigurationManager.ConnectionStrings 用來讀取配置文件中設置的資料庫連線字串，這裡使用 "OracleDbContext" 作為連線字串的名稱。
+                string connectionString = ConfigurationManager.ConnectionStrings["OracleDbContext"].ConnectionString;
 
                 using (IDbConnection db = new OracleConnection(connectionString))  //使用 OracleConnection 來創建資料庫連線
                 {
                     db.Open(); // 開啟資料庫連線
                     string sql = "SELECT stock_no, stock_name, low_price, high_price, modify_date, modify_user FROM Stock";
 
-                    // 執行 SQL 查詢並轉換為 List
+                    // 執行 SQL 查詢並轉換為 List﹐因 Dapper 返回的是 IEnumerable類型 而非 List
+                    //Query<Stock>(sql) 使用 Dapper 執行 SQL 查詢，並將每一行結果到 Stock 類別的實例，返回的是 List<Stock>
                     var stockList = db.Query<Stock>(sql).ToList();
 
                     // 綁定 DataGrid

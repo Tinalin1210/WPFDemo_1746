@@ -3,9 +3,11 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Stock Data" Height="450" Width="800">
+    <!-- 設定窗口的標題、長度與寬度 -->
     <Grid>
-        <!-- 確保這裡是 DataGrid，並且設置 x:Name -->
+        <!-- 確保這裡是 DataGrid，並且設置 x:Name 為甚麼名稱-->
         <!--HorizontalAlignment="Stretch" 和 VerticalAlignment="Stretch"：這兩個屬性設置要為了水平和垂直對齊-->
-        <DataGrid x:Name="StockDataGrid" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <!--AutoGenerateColumns = 當設置為 True 時，DataGrid 會自動根據數據源中的屬性來創建列。-->
+            <DataGrid x:Name="StockDataGrid" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
     </Grid>
 </Window>

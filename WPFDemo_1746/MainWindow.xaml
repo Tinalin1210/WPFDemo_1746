@@ -8,6 +8,19 @@
         <!-- 確保這裡是 DataGrid，並且設置 x:Name 為甚麼名稱-->
         <!--HorizontalAlignment="Stretch" 和 VerticalAlignment="Stretch"：這兩個屬性設置要為了水平和垂直對齊-->
         <!--AutoGenerateColumns = 當設置為 True 時，DataGrid 會自動根據數據源中的屬性來創建列。-->
-            <DataGrid x:Name="StockDataGrid" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <DataGrid x:Name="StockDataGrid" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                </Grid>
+               
+        </Grid>
     </Grid>
 </Window>

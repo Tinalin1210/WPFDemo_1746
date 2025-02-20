@@ -1,5 +1,6 @@
 ﻿using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Windows;
 
 namespace WPFDemo_1746
@@ -9,6 +10,7 @@ namespace WPFDemo_1746
     /// </summary>
     public partial class App : Application
     {
+         
     }
 
 }
